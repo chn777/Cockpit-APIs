@@ -12,7 +12,7 @@ In the examples below, I will be using [Postman](https://www.getpostman.com). Th
 
 ### First Things First
 
-Before you can make your first API call, you need four items:
+Before you can start making API calls, you need four items:
 * Cockpit Manager URL 
 * Service Key
 * OAuth Token
@@ -65,8 +65,7 @@ Sample service key file:
 ```  
 
 ### OAuth Token
-For each GET or POST call, you need to provide a token, which can be obtained by POSTing the client ID and Client Secret from the service key above for authentication together with the username and password of the cockpit user and grant_type=password parameter in the body.  
-The token expires every 14399 seconds (4 hours). 
+For each GET or POST call, you need to provide a token. This can be obtained with a POST to the /oauth/token API of the UAA service. You authenticate with the client ID and client secret from the service key. In the body you need to pass the username and password of the cockpit user (for authorization) and the grant_type=password parameter. The POST call returns JSON with an access token and some other parameters amongst which the expiration time. By default the token expires every 14399 seconds (4 hours). 
 
 Sample cURL script
 ```  
@@ -78,7 +77,7 @@ curl -X POST \
   -d 'grant_type=password&username=cockpit_admin&password=Abc123DoReMi'
 ```  
 ### GET and POST APIs
-Currently three GET APIs are available: 
+Currently, three GET APIs are available: 
 * /resource/RegisteredResourcesGet
 * /group/GroupsForUserGet
 * /group/GroupResourcesGet?groupId=
@@ -90,7 +89,7 @@ curl -X GET \
   -H 'Postman-Token: 3c34eb11-d30b-4425-822c-c25e42e8908b' \
   -H 'cache-control: no-cache'
 ``` 
-Currently ten POST APIs are available, each with different input parameters, response, and required role. For the complete list, see the SAP HANA Cockpit documentation. Below an example fo the /group/GroupDelete API with the groupID parameter provided in JSON format. 
+There are ten POST APIs are available, each with different input parameters, response, and required role. For the complete list, see the SAP HANA Cockpit documentation. Below an example fo the /group/GroupDelete API with the groupID parameter provided in JSON format. 
 ``` 
 curl -X POST \
   https://cockpithost.mydomain.com51025/group/GroupDelete \
@@ -101,10 +100,10 @@ curl -X POST \
     "groupId": "356"
 }'
 ``` 
-### Tutorial Video ### 
+### Cockpit API (GET) Tutorial Video ### 
 [![Cockpit APIs](https://img.youtube.com/vi/wuy8eTRU_EE/0.jpg)](https://www.youtube.com/watch?v=wuy8eTRU_EE "Cockpit APIs")
 
-### Tutorial Video ### 
+### Cockpit API (POST) Tutorial Video ### 
 [![Cockpit POST APIs](https://img.youtube.com/vi/zj5qnJeR8Z0/0.jpg)](https://www.youtube.com/watch?v=zj5qnJeR8Z0 "Cockpit POST APIs")
 
 ### Documentation ### 
