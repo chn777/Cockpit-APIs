@@ -13,14 +13,14 @@ In the examples below, I will be using [Postman](https://www.getpostman.com). Th
 ### First Things First
 
 Before you can start making API calls, you need four items:
-* Cockpit Manager URL 
+* Cockpit Manager Service URL 
 * Service Key
 * OAuth Token
 * GET or POST API
 
 ### Cockpit Manager URL 
 
-Getting the Cockpit Manager URL can be as easy as looking in the address bar of your browser when you are connected. However, should this not be an option, you can query the XS controller. Below some sample output. 
+To get the Cockpit Manager Service URL you can query the XS controller. Below some sample output. 
 ``` 
 h4cadm@cockpithost:/usr/sap/H4C/HDB96> xs l
 
