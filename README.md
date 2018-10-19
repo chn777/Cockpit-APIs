@@ -4,7 +4,7 @@ Sample code for the SAP HANA Cockpit POST/GET API tutorial videos with links to 
 ![SAP HANA Academy](https://yt3.ggpht.com/-BHsLGUIJDb0/AAAAAAAAAAI/AAAAAAAAAVo/6_d1oarRr8g/s100-mo-c-c0xffffffff-rj-k-no/photo.jpg)
 
 ## Purpose
-SAP HANA cockpit provides modifying (POST) and nonmodifying (GET) REST APIs. This allows you to query cockpit for registered resources and register resources yourself programmatically. Additionally, you can create resource groups, add  resources to groups, create cockpit users and add user to groups. 
+SAP HANA cockpit provides modifying (POST) and nonmodifying (GET) REST APIs. This allows you to query cockpit for registered resources and register resources programmatically. Additionally, you can create resource groups, add  resources to groups, create cockpit users and add user to groups. 
 
 ### Postman 
 
